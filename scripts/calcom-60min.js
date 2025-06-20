@@ -3,8 +3,8 @@ Cal("init", "60min", {origin:"https://cal.com"});
 
   
   // Important: Please add the following attributes to the element that should trigger the calendar to open upon clicking.
-  // `data-cal-link="rleemiller/60min"`
+  // `data-cal-link="rebeccamiller/60min"`
   // data-cal-namespace="60min"
   // `data-cal-config='{"layout":"month_view"}'`
 
-  Cal.ns["60min"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#27163E"}},"hideEventTypeDetails":false,"layout":"month_view"});
+  Cal.ns["60min"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#292929"},"dark":{"cal-brand":"#fafafa"}},"hideEventTypeDetails":false,"layout":"month_view"});
