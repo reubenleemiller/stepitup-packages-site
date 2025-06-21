@@ -1,9 +1,15 @@
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 const PRICES = {
-  "math-package": 20000,
-  "step-it-up-package": 36000,
-  "language-package": 20000,
+  "math-package-k3": 20000,
+  "step-it-up-package-k3": 36000,
+  "language-package-k3": 20000,
+  "math-package-45": 36000,
+  "step-it-up-package-45": 50000,
+  "language-package-45": 20000,
+  "math-package-6": 36000,
+  "step-it-up-package-6": 65000,
+  "language-package-6": 36000,
 };
 
 exports.handler = async (event) => {
