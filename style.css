@@ -596,8 +596,8 @@ footer {
 }
 
 /* OUTSIDE BORDERS: Use negative values to move arrows outside carousel/cards */
-.carousel-arrow.left { left: -2.2rem; }
-.carousel-arrow.right { right: -2.2rem; }
+.carousel-arrow.left { left: -3rem; }
+.carousel-arrow.right { right: -3rem; }
 
 .carousel-arrow:hover {
   background-color: #4d8fe0;
@@ -782,8 +782,8 @@ footer {
 }
 /* Responsive Tweaks */
 @media (max-width: 900px) {
-  .carousel-arrow.left { left: -2.6rem; }
-  .carousel-arrow.right { right: -2.6rem; }
+  .carousel-arrow.left { left: -3.4rem; }
+  .carousel-arrow.right { right: -3.4rem; }
 }
 @media (max-width: 768px) {
   .carousel-container {
@@ -833,20 +833,20 @@ footer {
     flex: 0 0 10%;
   }
   /* Carousel arrows further outside on tablets */
-  .carousel-arrow.left { left: -2.8rem; }
-  .carousel-arrow.right { right: -2.8rem; }
+  .carousel-arrow.left { left: -3.8rem; }
+  .carousel-arrow.right { right: -3.8rem; }
 }
 /* New tweaks for small screens: arrows further outside than the cards */
 @media (max-width: 600px) {
   .carousel-container { padding: 1rem 0.25rem 2.5rem; }
   .pricing-card { max-width: 95vw; }
-  .carousel-arrow.left { left: -3.2rem; }
-  .carousel-arrow.right { right: -3.2rem; }
+  .carousel-arrow.left { left: -1rem; }
+  .carousel-arrow.right { right: -1rem; }
 }
 /* On very small screens, ensure at least 8px gap (if -3.4rem would go offscreen) */
 @media (max-width: 400px) {
-  .carousel-arrow.left { left: 8px; }
-  .carousel-arrow.right { right: 8px; }
+  .carousel-arrow.left { left: -3rem; }
+  .carousel-arrow.right { right: -3rem; }
 }
 
 /* Pricing header */
@@ -891,11 +891,5 @@ footer {
   }
   .pricing-card ul {
     max-width: 220px;
-  }
-}
-@media (max-width: 600px) {
-  .pricing-card,
-  .pricing-card.selected {
-    transform: none !important;
   }
 }
