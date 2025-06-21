@@ -76,7 +76,6 @@ nav ul li a {
   font-size: 25px;
   font-family: sans-serif;
   color: #2c77cc
-
 }
 nav ul li a:hover {
   background-color: #f0f0f0;
@@ -568,7 +567,8 @@ footer {
   position: relative;
 }
 
-/* Carousel Arrows */
+/* Carousel Arrows
+   FIX: Always outside the package card border, never inside */
 .carousel-arrow {
   position: absolute;
   top: 50%;
@@ -587,14 +587,18 @@ footer {
   justify-content: center;
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  /* Remove any padding for perfect centering */
 }
 .carousel-arrow-icon {
   display: block;
   width: 1.7rem;
   height: 1.7rem;
   margin: 0;
-  /* No additional margin or padding needed */
 }
+
+/* OUTSIDE BORDERS: Use negative values to move arrows outside carousel/cards */
+.carousel-arrow.left { left: -2.2rem; }
+.carousel-arrow.right { right: -2.2rem; }
 
 .carousel-arrow:hover {
   background-color: #4d8fe0;
@@ -778,8 +782,12 @@ footer {
   }
 }
 /* Responsive Tweaks */
+@media (max-width: 900px) {
+  .carousel-arrow.left { left: -2.6rem; }
+  .carousel-arrow.right { right: -2.6rem; }
+}
 @media (max-width: 768px) {
-.carousel-container {
+  .carousel-container {
     padding: 2rem 1rem 3rem;
     overflow: visible;
   }
@@ -789,7 +797,6 @@ footer {
     scroll-padding-right: 50%;
     gap: 1rem;
   }
-
   .pricing-cards {
     padding: 0 0 2rem;
     display: flex;
@@ -802,43 +809,46 @@ footer {
     padding: 1.25rem 1rem 2rem;
     box-sizing: border-box;
   }
-
   .ribbon {
     top: -20px;
     font-size: 0.7rem;
     padding: 4px 10px;
   }
-  
- .carousel-arrow {
+  .carousel-arrow {
     font-size: 1.4rem;
-    padding: 0.4rem 0.6rem;
+    width: 2.5rem;
+    height: 2.5rem;
     top: 48%;
   }
-
   .select-btn {
     font-size: 1rem;
     height: 44px;
   }
-
   .subscribe-label {
     font-size: 0.92rem;
     margin-top: 1rem;
   }
-
   /* Fix cutoff on right side by padding the end */
   .pricing-cards::after {
     content: "";
     flex: 0 0 10%;
   }
+  /* Carousel arrows further outside on tablets */
+  .carousel-arrow.left { left: -2.8rem; }
+  .carousel-arrow.right { right: -2.8rem; }
 }
-/* New tweaks for very small screens */
-@media (max-width: 480px) {
+/* New tweaks for small screens: arrows further outside than the cards */
+@media (max-width: 600px) {
   .carousel-container { padding: 1rem 0.25rem 2.5rem; }
   .pricing-card { max-width: 95vw; }
-  .carousel-arrow.left { left: 5px; }
-  .carousel-arrow.right { right: 5px; }
+  .carousel-arrow.left { left: -3.4rem; }
+  .carousel-arrow.right { right: -3.4rem; }
 }
-
+/* On very small screens, ensure at least 8px gap (if -3.4rem would go offscreen) */
+@media (max-width: 400px) {
+  .carousel-arrow.left { left: 8px; }
+  .carousel-arrow.right { right: 8px; }
+}
 
 /* Pricing header */
 .pricing-card h2 {
@@ -880,27 +890,7 @@ footer {
     max-width: 275px;
     margin: 1rem auto;
   }
-
   .pricing-card ul {
     max-width: 220px;
   }
-}
-.carousel-arrow.left { left: 16px; }
-.carousel-arrow.right { right: 16px; }
-
-@media (max-width: 768px) {
-  .carousel-arrow.left { left: -12px; }
-  .carousel-arrow.right { right: -12px; }
-}
-
-/* On smaller screens, increase the gap so the circle doesn't touch card border */
-@media (max-width: 600px) {
-  .carousel-arrow.left { left: 4vw; }
-  .carousel-arrow.right { right: 4vw; }
-}
-
-/* On very small screens, ensure at least 8px gap */
-@media (max-width: 400px) {
-  .carousel-arrow.left { left: 8px; }
-  .carousel-arrow.right { right: 8px; }
 }
