@@ -873,27 +873,27 @@ footer {
   }
 }
 .carousel-arrow.left {
-  left: -45px; /* Always outside the carousel/card border */
+  left: -20px; /* Always outside the carousel/card border */
 }
 
 .carousel-arrow.right {
-  right: -45px;
+  right: -20px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .carousel-arrow.left {
-    left: -30px;
+    left: -25px;
   }
   .carousel-arrow.right {
-    right: -30px;
+    right: -25px;
   }
 }
 
 @media (max-width: 600px) {
   .carousel-arrow.left {
-    left: -18vw; /* Responsive: outside card even on small screens */
+    left: -9vw; /* Responsive: outside card even on small screens */
   }
   .carousel-arrow.right {
-    right: -18vw;
+    right: -9vw;
   }
 }
