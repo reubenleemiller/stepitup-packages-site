@@ -891,9 +891,9 @@ footer {
 
 @media (max-width: 600px) {
   .carousel-arrow.left {
-    left: -9vw; /* Responsive: outside card even on small screens */
+    left: -7vw; /* Responsive: outside card even on small screens */
   }
   .carousel-arrow.right {
-    right: -9vw;
+    right: -7vw;
   }
 }
