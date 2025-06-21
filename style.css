@@ -589,14 +589,6 @@ footer {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.carousel-arrow.left {
-  left: -5px;
-}
-
-.carousel-arrow.right {
-  right: -5px;
-}
-
 /* Pricing Cards Container */
 .pricing-cards {
   display: flex;
@@ -880,11 +872,28 @@ footer {
     max-width: 220px;
   }
 }
-@media (max-width: 600px) {
+.carousel-arrow.left {
+  left: -45px; /* Always outside the carousel/card border */
+}
+
+.carousel-arrow.right {
+  right: -45px;
+}
+
+@media (max-width: 900px) {
   .carousel-arrow.left {
-    left: 10px;
+    left: -30px;
   }
   .carousel-arrow.right {
-    right: 10px;
+    right: -30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-arrow.left {
+    left: -18vw; /* Responsive: outside card even on small screens */
+  }
+  .carousel-arrow.right {
+    right: -18vw;
   }
 }
