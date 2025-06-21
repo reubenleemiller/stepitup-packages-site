@@ -587,7 +587,6 @@ footer {
   justify-content: center;
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-  /* Remove any padding for perfect centering */
 }
 .carousel-arrow-icon {
   display: block;
@@ -841,8 +840,8 @@ footer {
 @media (max-width: 600px) {
   .carousel-container { padding: 1rem 0.25rem 2.5rem; }
   .pricing-card { max-width: 95vw; }
-  .carousel-arrow.left { left: -3.4rem; }
-  .carousel-arrow.right { right: -3.4rem; }
+  .carousel-arrow.left { left: -3.2rem; }
+  .carousel-arrow.right { right: -3.2rem; }
 }
 /* On very small screens, ensure at least 8px gap (if -3.4rem would go offscreen) */
 @media (max-width: 400px) {
