@@ -29,22 +29,26 @@ document.addEventListener("DOMContentLoaded", () => {
       const dot = document.createElement("div");
       dot.classList.add("carousel-dot");
       if (i === currentIndex) dot.classList.add("active");
+      // Make dots clickable
+      dot.addEventListener("click", () => {
+        selectCard(i);
+      });
       dotContainer.appendChild(dot);
     });
   }
 
   function scrollToCard(index, smooth = true) {
-  const card = pricingCards[index];
-  if (!card) return;
-  // Use scrollIntoView for better mobile cross-browser support
-  card.scrollIntoView({
-    behavior: smooth ? "smooth" : "auto",
-    inline: "center",
-    block: "nearest"
-  });
-  updateActiveDot(index);
-  currentIndex = index;
-}
+    const card = pricingCards[index];
+    if (!card) return;
+    // Use scrollIntoView for better mobile cross-browser support
+    card.scrollIntoView({
+      behavior: smooth ? "smooth" : "auto",
+      inline: "center",
+      block: "nearest"
+    });
+    updateActiveDot(index);
+    currentIndex = index;
+  }
 
   function selectCard(index) {
     pricingCards.forEach((card, i) => {
@@ -57,13 +61,21 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollToCard(index);
   }
 
+  // Make Select button and Card both clickable
   pricingCards.forEach((card, index) => {
     const selectBtn = card.querySelector(".select-btn");
     if (selectBtn) {
-      selectBtn.addEventListener("click", () => {
+      selectBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
         selectCard(index);
       });
     }
+    card.addEventListener("click", (e) => {
+      // Avoid double trigger if clicking the button itself
+      if (!e.target.classList.contains('select-btn') && !card.classList.contains('selected')) {
+        selectCard(index);
+      }
+    });
   });
 
   if (leftArrow && rightArrow) {
@@ -101,26 +113,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Final guaranteed scroll on full page + layout render
     function waitForPreloaderThenScroll() {
-  const selectedCard = document.querySelector(".pricing-card.selected");
-  const carousel = document.querySelector(".pricing-carousel");
+      const selectedCard = document.querySelector(".pricing-card.selected");
+      const carousel = document.querySelector(".pricing-carousel");
 
-  if (!selectedCard || !carousel) return;
+      if (!selectedCard || !carousel) return;
 
-  const cardCenter = selectedCard.offsetLeft + selectedCard.offsetWidth / 2;
-  const carouselCenter = carousel.offsetWidth / 2;
-  const scrollLeft = cardCenter - carouselCenter;
+      const cardCenter = selectedCard.offsetLeft + selectedCard.offsetWidth / 2;
+      const carouselCenter = carousel.offsetWidth / 2;
+      const scrollLeft = cardCenter - carouselCenter;
 
-  // Only scroll once the layout is stable and the preloader is gone
-  if (document.documentElement.classList.contains('preloader-lock') || carousel.offsetWidth === 0) {
-    requestAnimationFrame(waitForPreloaderThenScroll);
-  } else {
-    carousel.scrollLeft = scrollLeft;
-  }
-}
+      // Only scroll once the layout is stable and the preloader is gone
+      if (document.documentElement.classList.contains('preloader-lock') || carousel.offsetWidth === 0) {
+        requestAnimationFrame(waitForPreloaderThenScroll);
+      } else {
+        carousel.scrollLeft = scrollLeft;
+      }
+    }
 
-window.addEventListener("load", () => {
-  requestAnimationFrame(waitForPreloaderThenScroll);
-});
+    window.addEventListener("load", () => {
+      requestAnimationFrame(waitForPreloaderThenScroll);
+    });
   }
 
   createDots();
