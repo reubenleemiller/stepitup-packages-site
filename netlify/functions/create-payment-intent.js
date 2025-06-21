@@ -1,9 +1,9 @@
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 const PRICES = {
-  "4hr": 16000,
-  "8hr": 32000,
-  "12hr": 48000,
+  "math-package": 20000,
+  "step-it-up-package": 36000,
+  "language-package": 20000,
 };
 
 exports.handler = async (event) => {

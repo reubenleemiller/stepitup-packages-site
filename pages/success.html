@@ -33,28 +33,24 @@
 </nav>
 </header>
 
-  <main class="content" style="text-align: center;">
-    <div class="refund-policy">
+  <main class="content">
+    <div class="refund-policy" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
     <h2>Payment Successful</h2>
     <p>Thank you for purchasing a tutoring package! Time to Book Your Sessions!. </p>
-    <p>Note that all Sessions will need to be Manually Confirmed by the Host Prior to Being Reserved, so please only book the same number of hours as corresponds to your session package.</p>
+    <p><strong>Note that the time you choose will be set to repeat for the same weekday and time for the next 6 weeks, if if this will be an issue please contact your tutor directly at <a href="mailto:info@stepituplearning.ca">info@stepituplearning.ca</a></strong></p>
     </div>
- <div class="booking-buttons">
-  <a data-cal-link="rleemiller/prepaid-60-min" data-cal-namespace="prepaid-60-min" data-cal-config='{"layout":"month_view"}' class="button" style="cursor: pointer;">Book Prepaid <br>60-Min Sessions</a>
-  <a data-cal-link="rleemiller/prepaid-90-min" data-cal-namespace="prepaid-90-min" data-cal-config='{"layout":"month_view"}' class="button" style="cursor: pointer;">Book Prepaid <br>90-Min Sessions</a>
-  <a data-cal-link="rleemiller/prepaid-120-min" data-cal-namespace="prepaid-120-min" data-cal-config='{"layout":"month_view"}' class="button" style="cursor: pointer;">Book Prepaid <br>120-Min Sessions</a>
-  </div>
+<div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline"></div>
   </main>
 
 <footer class="footer-flex">
 <div class="footer-links">
-<p>© 2025 RM Tutoring Services.</p>
-<a href="https://rmtutoringservices.com/index">Home</a>
-<a href="https://rmtutoringservices.com/pages/about">About</a>
-<a href="https://rmtutoringservices.com/pages/terms-of-service">Terms of Service</a>
-<a href="https://rmtutoringservices.com/pages/privacy-policy">Privacy Policy</a>
-<a href="https://rmtutoringservices.com/pages/refund-policy">Refund Policy</a>
-<a href="https://rmtutoringservices.com/pages/contact">Contact</a>
+<p>© 2025 Step it Up Learning</p>
+<a href="https://stepituplearning.ca/index">Home</a>
+<a href="https://stepituplearning.ca/pages/about">About</a>
+<a href="https://stepituplearning.ca/pages/terms-of-service">Terms of Service</a>
+<a href="https://stepituplearning.ca/pages/privacy-policy">Privacy Policy</a>
+<a href="https://stepituplearning.ca/pages/refund-policy">Refund Policy</a>
+<a href="https://stepituplearning.ca/pages/contact">Contact</a>
 <div class="footer-payment-icons">
   <i class="fab fa-cc-visa"></i>
   <i class="fab fa-cc-mastercard"></i>
@@ -62,12 +58,9 @@
 </div>
 </div>
 <div class="footer-links">
-<p>Book and Pay for Sessions or Packages</p>
-<a class="calcom-button" data-cal-link="rleemiller/60min" data-cal-namespace="60min" data-cal-config='{"layout":"month_view"}'>60-min Sessions</a>
-<a class="calcom-button" data-cal-link="rleemiller/90min" data-cal-namespace="90min" data-cal-config='{"layout":"month_view"}'>90-min Sessions</a>
-<a class="calcom-button" data-cal-link="rleemiller/120min" data-cal-namespace="120min" data-cal-config='{"layout":"month_view"}'>120-min Sessions</a>
-<a href="https://packages.rmtutoringservices.com/">Packages</a>
-<a href="https://pay.rmtutoringservices.com/p/login/fZubJ10rje8h7KO1Tt9sk00">Manage Subscription</a>
+<p>Sessions, Packages and Subscriptions</p>
+<a class="calcom-button" data-cal-link="rebeccamiller/60min" data-cal-namespace="60min" data-cal-config='{"layout":"month_view"}'>60-min Sessions</a>
+<a href="https://packages.stepituplearning.ca/">Packages</a>
 </div>
 <div class="footer-contact-form">
     <h3>Send Us a Message</h3>
@@ -85,13 +78,8 @@
 </footer>
 <script src="../scripts/preloader.js"></script>
 <script src="../scripts/calcom-60min.js"></script>
-<script src="../scripts/calcom-60min-prepaid.js"></script>
-<script src="../scripts/calcom-90min.js"></script>
-<script src="../scripts/calcom-90min-prepaid.js"></script>
-<script src="../scripts/calcom-120min.js"></script>
-<script src="../scripts/calcom-120min-prepaid.js"></script>
+<script src="../scripts/calcom-60min-package.js"></script>
 <script src="../scripts/contact-form.js"></script>
-<script src="../scripts/chatwoot.js"></script>
   <script>
   function toggleMenu() {
     const nav = document.getElementById("nav-menu");

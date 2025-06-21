@@ -53,12 +53,12 @@ exports.handler = async (event) => {
       <div style="font-family: 'Times New Roman', Times, serif; font-size: 16px; line-height: 1.6;">
         Hi ${name},<br><br>
 
-        Thanks for contacting <strong>RM Tutoring Services</strong>!<br>
+        Thanks for contacting <strong>Step it Up Learning</strong>!<br>
         This is a quick confirmation that we've received your message and created a support ticket.<br><br>
 
         <strong>Ticket ID:</strong> <code>${ticketId}</code><br><br>
 
-        We typically respond within a few hours. In the meantime, feel free to browse our scheduling options or tutoring packages.<br><br>
+        We typically respond within a few hours. In the meantime, feel free to browse our scheduling options or packages.<br><br>
 
         <hr>
         <strong>Your Message:</strong><br>
@@ -67,11 +67,10 @@ exports.handler = async (event) => {
         </blockquote><br>
 
         —<br>
-        <strong>Reuben Miller</strong><br>
-        RM Tutoring Services<br>
-        <a href="mailto:reuben.miller@rmtutoringservices.com">reuben.miller@rmtutoringservices.com</a><br>
-        <a href="https://rmtutoringservices.com">rmtutoringservices.com</a><br>
-        <img src="https://rmtutoring-site.netlify.app/assets/logo.png" alt="RM Tutoring Logo" style="height: 40px;">
+        Step it Up Learning<br>
+        <a href="mailto:info@stepituplearning.ca">info@stepituplearning.ca</a><br>
+        <a href="https://stepituplearning.ca">stepituplearning.ca</a><br>
+        <img src="https://stepituplearning.ca/assets/logo.png" alt="Step it Up Learning Logo" style="height: 160px;">
       </div>
     `;
 
@@ -83,7 +82,7 @@ exports.handler = async (event) => {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        from: "Reuben Miller <reuben.miller@rmtutoringservices.com>",
+        from: "Step it Up Learning <info@stepituplearning.ca>",
         to: email,
         subject: `We've received your message [Ticket ${ticketId}]`,
         html: emailBody

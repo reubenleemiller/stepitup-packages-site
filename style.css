@@ -89,7 +89,7 @@ nav ul li a:hover {
 .content {
   position: relative;
   padding: 2rem;
-  margin: 2rem auto;
+  margin: 5rem auto;
   max-width: 800px;
   background-color: white;
   border-radius: 10px;
@@ -98,6 +98,7 @@ nav ul li a:hover {
   box-sizing: border-box;
   width: calc(100% - 2rem); /* adds breathing room on smaller screens */
 }
+
 
 form {
   display: flex;
@@ -114,7 +115,7 @@ input, textarea {
 }
 
 input:focus, textarea:focus {
-  border-color: #2f1444;
+  border-color: #2c77cc;
   box-shadow: 0 0 5px rgba(47, 20, 68, 0.3);
   outline: none;
 }
@@ -499,7 +500,7 @@ footer {
 }
 
 .refund-policy a {
-  color: #4CAF50;
+  color: #2c77cc;
   font-weight: bold;
   text-decoration: none;
 }
@@ -907,3 +908,4 @@ footer {
 .pricing-card {
   cursor: pointer;
 }
+

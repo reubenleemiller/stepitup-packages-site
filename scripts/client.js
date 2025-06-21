@@ -1,9 +1,9 @@
-const stripe = Stripe("pk_live_51QyjAMFkTAUuP5b8POjVyVCKi0ry2R54UQz4nZaTyWJYSSYPdXliMTvkS256IoT0iSL323qcR90mZjfbH3PU8Wed00Bs0TS9MZ");
+const stripe = Stripe("pk_live_51RcDEiEAXTaZVoaTK0xXr59LktlXUozw9WXX2NiOIAmuqxZbYRSXneL7IYIiCpRoKqMiyhIwOgDSVNiYzieXr8Wi00L7SmoVSs");
 
 const subscriptionLinks = {
-  "math-package": "https://pay.stepituplearning.ca/b/14AcN5fmd2pzaX0gOn9sk03",
-  "step-it-up-package": "https://pay.stepituplearning.ca/b/3cI5kD6PH5BLaX0gOn9sk04",
-  "language-package": "https://pay.stepituplearning.ca/b/bJeaEX6PH7JT2queGf9sk05"
+  "math-package": "LINK_HERE_IF_EVER_ADDED",
+  "step-it-up-package": "LINK_HERE_IF_EVER_ADDED",
+  "language-package": "LINK_HERE_IF_EVER_ADDED"
 };
 
 let selectedPackage = "step-it-up-package";
