@@ -892,11 +892,13 @@ footer {
   .carousel-arrow.left { left: -12px; }
   .carousel-arrow.right { right: -12px; }
 }
+
 /* On smaller screens, increase the gap so the circle doesn't touch card border */
 @media (max-width: 600px) {
   .carousel-arrow.left { left: 4vw; }
   .carousel-arrow.right { right: 4vw; }
 }
+
 /* On very small screens, ensure at least 8px gap */
 @media (max-width: 400px) {
   .carousel-arrow.left { left: 8px; }
