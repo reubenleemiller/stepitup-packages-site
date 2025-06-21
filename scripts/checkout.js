@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       const { error } = await stripe.confirmPayment({
         elements,
         confirmParams: {
-          return_url: "https://packages.rmtutoringservices.com/pages/success",
+          return_url: "https://packages.stepituplearning.ca/pages/success",
           payment_method_data: {
             billing_details: {
               name: customerName,

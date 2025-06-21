@@ -1,12 +1,12 @@
 const stripe = Stripe("pk_live_51QyjAMFkTAUuP5b8POjVyVCKi0ry2R54UQz4nZaTyWJYSSYPdXliMTvkS256IoT0iSL323qcR90mZjfbH3PU8Wed00Bs0TS9MZ");
 
 const subscriptionLinks = {
-  "4hr": "https://pay.rmtutoringservices.com/b/14AcN5fmd2pzaX0gOn9sk03",
-  "8hr": "https://pay.rmtutoringservices.com/b/3cI5kD6PH5BLaX0gOn9sk04",
-  "12hr": "https://pay.rmtutoringservices.com/b/bJeaEX6PH7JT2queGf9sk05"
+  "math-package": "https://pay.stepituplearning.ca/b/14AcN5fmd2pzaX0gOn9sk03",
+  "step-it-up-package": "https://pay.stepituplearning.ca/b/3cI5kD6PH5BLaX0gOn9sk04",
+  "language-package": "https://pay.stepituplearning.ca/b/bJeaEX6PH7JT2queGf9sk05"
 };
 
-let selectedPackage = "8hr";
+let selectedPackage = "step-it-up-package";
 let currentIndex = 1;
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -147,7 +147,7 @@ window.addEventListener("load", () => {
       if (subscribe && subscriptionLinks[pkg]) {
         window.location.href = subscriptionLinks[pkg];
       } else {
-        window.location.href = `https://packages.rmtutoringservices.com/pages/checkout.html?package=${pkg}`;
+        window.location.href = `https://packages.stepituplearning.ca/pages/checkout.html?package=${pkg}`;
       }
     });
   }
