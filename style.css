@@ -908,4 +908,60 @@ footer {
 .pricing-card {
   cursor: pointer;
 }
+.grade-select-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.grade-select-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.grade-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 75px;
+  min-width: 150px;
+  padding: 1rem 2rem;
+  background: #2c77cc;
+  color: #fff;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  margin: 0.5rem 0;
+  transition: background 0.2s, transform 0.2s;
+  cursor: pointer;
+  box-sizing: border-box;
+  text-align: center;
+}
+.grade-btn:hover, .grade-btn:focus {
+  background: #4d8fe0;
+  transform: translateY(-2px) scale(1.03);
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .grade-select-wrapper {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .grade-btn {
+    width: 100%;
+    min-width: 0;
+    font-size: 1.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
 
