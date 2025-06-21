@@ -774,11 +774,10 @@ footer {
 }
 /* Responsive Tweaks */
 @media (max-width: 768px) {
-  .carousel-container {
+.carousel-container {
     padding: 2rem 1rem 3rem;
     overflow: visible;
   }
-
   .pricing-carousel {
     padding: 0 2rem;
     scroll-padding-left: 50%;
@@ -791,7 +790,6 @@ footer {
     display: flex;
     gap: 1rem;
   }
-
   .pricing-card {
     flex: 0 0 auto;
     max-width: 320px;
@@ -828,6 +826,14 @@ footer {
     flex: 0 0 10%;
   }
 }
+/* New tweaks for very small screens */
+@media (max-width: 480px) {
+  .carousel-container { padding: 1rem 0.25rem 2.5rem; }
+  .pricing-card { max-width: 95vw; }
+  .carousel-arrow.left { left: 5px; }
+  .carousel-arrow.right { right: 5px; }
+}
+
 
 /* Pricing header */
 .pricing-card h2 {
@@ -872,5 +878,13 @@ footer {
 
   .pricing-card ul {
     max-width: 220px;
+  }
+}
+@media (max-width: 600px) {
+  .carousel-arrow.left {
+    left: 10px;
+  }
+  .carousel-arrow.right {
+    right: 10px;
   }
 }

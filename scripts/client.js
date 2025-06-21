@@ -34,21 +34,17 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function scrollToCard(index, smooth = true) {
-    const card = pricingCards[index];
-    if (!card || !carousel) return;
-
-    const cardCenter = card.offsetLeft + card.offsetWidth / 2;
-    const carouselCenter = carousel.offsetWidth / 2;
-    const scrollLeft = cardCenter - carouselCenter;
-
-    carousel.scrollTo({
-      left: scrollLeft,
-      behavior: smooth ? "smooth" : "auto"
-    });
-
-    updateActiveDot(index);
-    currentIndex = index;
-  }
+  const card = pricingCards[index];
+  if (!card) return;
+  // Use scrollIntoView for better mobile cross-browser support
+  card.scrollIntoView({
+    behavior: smooth ? "smooth" : "auto",
+    inline: "center",
+    block: "nearest"
+  });
+  updateActiveDot(index);
+  currentIndex = index;
+}
 
   function selectCard(index) {
     pricingCards.forEach((card, i) => {
